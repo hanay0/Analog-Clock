@@ -10,6 +10,16 @@ let hrPosition = 20,
     minPosition = 102,
     secPosition = 267;
 
+    var date = new Date();
+    console.log(date);
+
+let hrs = date.getHours(),
+    mins = date.getMinutes(),
+    sec = date.getSeconds();
+
+    console.log("hours = " + hrs + " / minutes = " + mins + " / seconds = " + sec);
+
+
 
 HOURHAND.style.transform = "rotate(" + hrPosition + "deg)";
 MINUTEHAND.style.transform = "rotate(" + minPosition + "deg)";
