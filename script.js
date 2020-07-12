@@ -9,13 +9,12 @@ const SECONDHAND = document.querySelector("#second");
 function runTheClock(){
 
     var date = new Date();
-    console.log(date);
 
     let hrs = date.getHours();
     let mins = date.getMinutes();
     let sec = date.getSeconds();
 
-    console.log("hours = " + hrs + " / minutes = " + mins + " / seconds = " + sec);
+ 
 
 
     let hrPosition = (hrs*360/12)+(mins*(360/60)/12);
@@ -28,3 +27,6 @@ MINUTEHAND.style.transform = "rotate(" + minPosition + "deg)";
 SECONDHAND.style.transform = "rotate(" + secPosition + "deg)";
 
 }
+
+/*run this function every 1000ms which is every second*/
+var myInterval = setInterval(runTheClock, 1000);
